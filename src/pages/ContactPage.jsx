@@ -89,7 +89,7 @@ function ContactPage() {
           member trading platform.
         </p>
         <p className="mb-0">
-          Pricing: <strong>$500 setup</strong>, <strong>$100/month hosting</strong>, and{' '}
+          Pricing: <strong>$500 setup</strong>, <strong>$50/month hosting</strong>, and{' '}
           <strong>$50/hour customization or maintenance</strong>.
         </p>
       </section>

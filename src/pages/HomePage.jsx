@@ -76,7 +76,7 @@ function HomePage() {
           <Col md={4}>
             <Card className="h-100 pricing-highlight">
               <Card.Body>
-                <Card.Title>$100 / Month Hosting</Card.Title>
+                <Card.Title>$50 / month for hosting</Card.Title>
                 <Card.Text>
                   Ongoing hosting for your private member marketplace.
                 </Card.Text>

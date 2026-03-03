@@ -54,7 +54,7 @@ function ProductPage() {
           <Card.Body>
             <Card.Title>Pricing</Card.Title>
             <Card.Text className="mb-1">$500 one-time setup fee</Card.Text>
-            <Card.Text className="mb-1">$100 per month hosting fee</Card.Text>
+            <Card.Text className="mb-1">$50 per month hosting fee</Card.Text>
             <Card.Text className="mb-3">
               $50 per hour for customization and maintenance
             </Card.Text>

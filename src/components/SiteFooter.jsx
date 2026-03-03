@@ -8,7 +8,7 @@ function SiteFooter() {
           Decatur Island Community Exchange Software
         </small>
         <small className="text-muted">
-          Pricing: $500 setup + $100/month hosting + $50/hour customization
+          Pricing: $500 setup + $50/month hosting + $50/hour customization
         </small>
       </Container>
     </footer>
