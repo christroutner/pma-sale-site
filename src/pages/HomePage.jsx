@@ -10,18 +10,24 @@ function HomePage() {
           Launch a members-only trading network for your community.
         </h1>
         <p className="lead mb-4">
-          DICE SaaS provides a social-style web app where members post items,
+          TheLocalTrade.app provides a social-style web app where members post items,
           discover local offers, and coordinate peer-to-peer trade in a private
           environment.
         </p>
-        <Button as={Link} to="/contact" size="lg">
-          Schedule a Licensing Call
+        <Button
+          as="a"
+          href="https://demo.thelocaltrade.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          size="lg"
+        >
+          View Demo
         </Button>
       </section>
 
       <section className="section-space">
         <p className="small-caps-label mb-2">How It Works</p>
-        <h2 className="mb-3">Simple steps to launch your local PMA network</h2>
+        <h2 className="mb-3">Simple steps to launch your local PMA trade network</h2>
         <Row className="g-4">
           <Col md={4}>
             <Card className="h-100">
@@ -95,9 +101,11 @@ function HomePage() {
           </Col>
         </Row>
         <p className="muted-note mt-3 mb-0">
-          Includes the `dice-fe` member app and `pma-sm` REST API deployment
-          foundation.
+          Includes the 'front end' member app and a 'back end' REST API server, hosted and customized for your community.
         </p>
+        <Button as={Link} to="/contact" size="lg" className="mt-4">
+          Schedule a Licensing Call
+        </Button>
       </section>
     </>
   )

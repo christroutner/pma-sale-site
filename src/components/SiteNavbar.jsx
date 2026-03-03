@@ -15,7 +15,7 @@ function SiteNavbar() {
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand as={NavLink} to="/">
-          DICE SaaS
+          TheLocalTrade.app
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-nav" />
         <Navbar.Collapse id="main-nav">

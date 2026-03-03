@@ -83,7 +83,7 @@ function ContactPage() {
   return (
     <>
       <section className="section-space">
-        <h1 className="page-title">Contact DICE SaaS</h1>
+        <h1 className="page-title">Contact TheLocalTrade.app</h1>
         <p className="lead mb-2">
           Tell us about your community and we will help you launch a private
           member trading platform.
