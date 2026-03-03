@@ -76,6 +76,88 @@ export const faqItems = [
         'These cases do not create a blanket legal shield for PMAs. PMAs generally rely on private contract principles plus associative rights. If operations substantially affect the public (for example, public advertising or public-facing commercial transactions), additional regulation may apply. Courts evaluate actual conduct, not labels alone.',
     },
   },
+  {
+    question: 'How does PMA legal-basis guidance describe boundaries and risks?',
+    answer:
+      'This section summarizes additional PMA legal-basis guidance, including benefits, risks, operational boundaries, privacy rules, and enforcement considerations.',
+    pmaLegalBasisSummary: {
+      intro:
+        'Additional context from PMA legal-basis guidance: PMAs are generally described as private, membership-driven associations based on contract and constitutional association principles. This can provide regulatory flexibility in limited situations, but does not create immunity from law.',
+      keyFeatures: [
+        'Private contracts define purpose, member rights, and responsibilities.',
+        'Non-public status is central: PMAs operate as private associations, not open public businesses.',
+        'Membership is voluntary and restricted to people who agree to terms.',
+        'Legal arguments often rely on First Amendment association rights and contract law.',
+      ],
+      potentialBenefits: [
+        'Regulatory flexibility when activities remain private and non-commercial.',
+        'Greater member confidentiality and internal governance control.',
+        'Custom rulemaking tailored to a community mission.',
+      ],
+      challengesAndRisks: [
+        'Legal scope is often misunderstood; PMAs are not exempt from all regulation.',
+        'Public marketing, public-facing sales, and unsafe practices can trigger enforcement.',
+        'If activities are illegal or harmful, agencies can intervene despite PMA framing.',
+      ],
+      commonUseCases: [
+        'Healthcare and wellness associations.',
+        'Education and homeschooling cooperatives.',
+        'Trade and skills networks inside private communities.',
+        'Advocacy and faith-based member organizations.',
+      ],
+      prohibitionContext: [
+        'During Prohibition, some speakeasies used private-club structures and membership systems to limit public exposure.',
+        'Owners often argued alcohol was shared privately among members rather than sold publicly.',
+        'There is no clear landmark precedent specifically authorizing PMA alcohol distribution as a broad legal defense.',
+      ],
+      regulatedGoodsExamples: [
+        'Raw milk distribution via member-only agreements and risk acknowledgment.',
+        'Alcohol service in private clubs in restrictive local jurisdictions.',
+        'Distribution of non-USDA-inspected meat among consenting members.',
+        'Alternative health products/services provided inside membership structures.',
+      ],
+      strictPrivacyRules: [
+        'Restriction to members only.',
+        'Clear and explicit membership agreements.',
+        'No public advertising for member-only goods/services.',
+        'Internal communication through private channels.',
+        'Non-commercial framing and operations.',
+        'Private internal governance and documented procedures.',
+        'Avoidance of public harm and safety risks.',
+        'Documentation of private status (agreements, records, governance decisions).',
+      ],
+      pmaVsPublicSale: [
+        {
+          aspect: 'Membership requirement',
+          pma: 'Restricted to members under agreed private terms.',
+          publicSale: 'Open to the general public.',
+        },
+        {
+          aspect: 'Advertising',
+          pma: 'Member recruitment is private; public advertising creates risk.',
+          publicSale: 'Public advertising is standard.',
+        },
+        {
+          aspect: 'Regulatory posture',
+          pma: 'May face fewer rules if truly private and narrowly operated.',
+          publicSale: 'Commerce, licensing, and public health rules apply broadly.',
+        },
+        {
+          aspect: 'Purpose and structure',
+          pma: 'Mutual member benefit under private agreements.',
+          publicSale: 'Commercial transactions in open markets.',
+        },
+      ],
+      enforcementBoundaries: [
+        'Authorities may intervene when activities affect non-members or the public.',
+        'Authorities may intervene if a PMA appears to be a front for evading licensing or safety rules.',
+        'Member disputes can pull operations into regulatory and legal scrutiny.',
+        'Historical examples include actions tied to unlicensed healthcare, food safety violations, and controlled-substance distribution.',
+      ],
+      closingNote:
+        'Practical takeaway: PMAs can be a private organizational framework, but outcomes depend on real operations, documentation quality, and jurisdiction-specific law. Legal counsel is essential before launch.',
+    },
+  },
 ]
 
 export const dos = [
