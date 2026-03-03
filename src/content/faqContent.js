@@ -164,14 +164,12 @@ export const dos = [
   'Use signed membership agreements with clear expectations and consent.',
   'Restrict participation to members and keep member communications private.',
   'Maintain internal governance documents, meeting records, and policy updates.',
-  'Frame internal payments as dues/fees defined by membership agreements.',
-  'Consult legal counsel in your state before launching or changing operations.',
+  'Frame internal payments as dues/fees defined by membership agreements.'
 ]
 
 export const donts = [
   'Do not market PMA-only goods/services to the general public.',
   'Do not operate in ways that resemble open retail commerce.',
   'Do not assume the PMA label alone protects against all regulation.',
-  'Do not ignore public health, safety, or licensing obligations.',
-  'Do not deploy templates without attorney review and local adaptation.',
+  'Do not ignore public health, safety, or licensing obligations.'
 ]

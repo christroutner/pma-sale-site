@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
 import { Alert, Button, Card, Col, Form, Row, Spinner } from 'react-bootstrap'
-import LegalDisclaimer from '../components/LegalDisclaimer'
 
 const initialState = {
   name: '',
@@ -185,10 +184,6 @@ function ContactPage() {
             </Card>
           </Col>
         </Row>
-      </section>
-
-      <section>
-        <LegalDisclaimer compact />
       </section>
     </>
   )

@@ -5,7 +5,11 @@ export const caseStudySections = [
   },
   {
     heading: 'Operational Model',
-    body: 'Members use a private web app for posting products and services, while physical pickup and community interaction can be coordinated through shared spaces and member agreements.',
+    body: 'Members use a customized version of the demo app for posting products and services, while physical pickup and community interaction can be coordinated through the shared shed, pictured above.',
+    link: {
+      text: 'demo app',
+      href: 'https://demo.thelocaltrade.app',
+    },
   },
   {
     heading: 'Governance and Culture',
