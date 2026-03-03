@@ -20,6 +20,48 @@ function HomePage() {
       </section>
 
       <section className="section-space">
+        <p className="small-caps-label mb-2">How It Works</p>
+        <h2 className="mb-3">Simple steps to launch your local PMA network</h2>
+        <Row className="g-4">
+          <Col md={4}>
+            <Card className="h-100">
+              <Card.Body>
+                <Card.Title>Step 1: Set Up a Secure Physical Space</Card.Title>
+                <Card.Text>
+                  Find or build a secure, physical location with a lockable door.
+                  An unused shed works well as a practical meeting point and drop
+                  off location for members.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4}>
+            <Card className="h-100">
+              <Card.Body>
+                <Card.Title>Step 2: Members Post Offers</Card.Title>
+                <Card.Text>
+                  Members share photos and clear descriptions of the products and
+                  services they want to offer inside your private marketplace app.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4}>
+            <Card className="h-100">
+              <Card.Body>
+                <Card.Title>Step 3: Browse, Negotiate, and Exchange</Card.Title>
+                <Card.Text>
+                  Buyers browse listings, connect with sellers, and negotiate
+                  terms. The physical space can serve as a meetup point or a
+                  secure drop off location.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </section>
+
+      <section className="section-space">
         <Row className="g-4">
           <Col md={4}>
             <Card className="h-100 pricing-highlight">
