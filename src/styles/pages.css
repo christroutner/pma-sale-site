@@ -1,0 +1,522 @@
+/* ================================================================
+   INNER PAGES — FAQ, Documents, Case Study, Contact
+   ================================================================ */
+
+/* ── Shared page header ───────────────────────────────────────── */
+.page-header {
+  margin-bottom: var(--space-7);
+}
+
+.page-header--surface {
+  padding: var(--space-6) var(--space-5);
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--color-linen) 30%, #fff);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .page-header--surface {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+.page-header .page-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+  color: var(--color-bark);
+}
+
+.page-header .lead {
+  color: var(--color-slate);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+  font-size: 1.15rem;
+  max-width: 54ch;
+  margin-inline: auto;
+}
+
+.page-header .lead:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ── Legal disclaimer (FAQ / Documents) ───────────────────────── */
+.legal-disclaimer-alert {
+  border-radius: var(--radius-md);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 35%, transparent);
+  margin-top: var(--space-4);
+  margin-bottom: 0;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-inline: auto;
+  font-size: 0.95rem;
+}
+
+
+/* ================================================================
+   FAQ PAGE
+   ================================================================ */
+.page-faq-accordion {
+  max-width: 52rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* FAQ page: slightly wider reading column inside accordion answers */
+.page-faq-accordion .accordion-body > p:first-of-type {
+  font-size: 1.05rem;
+  color: var(--color-charcoal);
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+.faq-nested {
+  margin-top: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+}
+
+.faq-nested h3,
+.faq-nested h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  color: var(--color-bark);
+}
+
+.faq-nested h3:first-child,
+.faq-nested h4:first-child {
+  margin-top: 0;
+}
+
+.faq-nested ul {
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.faq-nested li {
+  margin-bottom: var(--space-2);
+  line-height: 1.65;
+  color: var(--color-slate);
+}
+
+.faq-nested p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-slate);
+}
+
+
+/* ── Do / Don't panels ────────────────────────────────────────── */
+.page-guidelines {
+  margin-top: var(--space-5);
+}
+
+.guideline-panel {
+  height: 100%;
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.03);
+}
+
+.guideline-panel--dos {
+  border-top: 4px solid var(--color-forest);
+}
+
+.guideline-panel--donts {
+  border-top: 4px solid color-mix(in srgb, #c45c5c 80%, var(--color-bark));
+}
+
+.guideline-panel h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--color-bark);
+}
+
+.guideline-panel ul {
+  margin-bottom: 0;
+  padding-left: var(--space-4);
+}
+
+.guideline-panel li {
+  margin-bottom: var(--space-3);
+  line-height: 1.65;
+  color: var(--color-slate);
+  font-size: 1.05rem;
+}
+
+.guideline-panel li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ================================================================
+   DOCUMENTS PAGE
+   ================================================================ */
+.documents-grid {
+  margin-top: var(--space-4);
+}
+
+.document-card {
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  background: #fff;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+.document-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.05);
+  border-color: color-mix(in srgb, var(--color-gold) 40%, transparent);
+}
+
+.document-card .card-body {
+  padding: var(--space-5);
+}
+
+.document-card .card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: var(--space-2);
+  color: var(--color-bark);
+}
+
+.document-card .card-text {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-slate) !important;
+}
+
+
+/* ================================================================
+   CASE STUDY PAGE — editorial layout, centered hero media, clear type
+   ================================================================ */
+.case-study-page {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.case-study-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case-study-page .case-study-hero {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.case-study-page .case-study-hero .page-title {
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.case-study-dek {
+  max-width: 44rem;
+  margin-inline: auto;
+  color: var(--color-slate);
+  line-height: 1.7;
+  font-size: 1.15rem;
+}
+
+.case-study-figure {
+  width: fit-content;
+  max-width: min(100%, 720px);
+  margin: var(--space-7) auto var(--space-6);
+  padding: var(--space-2);
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--color-linen) 30%, #fff);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.05);
+  line-height: 0;
+}
+
+.case-study-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
+.case-study-prose {
+  width: 100%;
+  max-width: 44rem;
+  margin-inline: auto;
+  padding-top: var(--space-3);
+}
+
+.case-study-prose p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  margin-bottom: var(--space-4);
+  color: var(--color-slate);
+}
+
+.case-study-prose p:first-of-type {
+  font-size: 1.2rem;
+  color: var(--color-bark);
+  font-weight: 500;
+}
+
+.case-study-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-page .luxury-card a {
+  color: var(--color-forest);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-gold) 55%, transparent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+.case-study-page .luxury-card a:hover {
+  color: var(--color-moss);
+}
+
+
+
+/* ================================================================
+   CONTACT PAGE — wide centered form (≥65vw desktop), polished UI
+   ================================================================ */
+.contact-page {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.contact-page-intro .page-header--surface {
+  padding: var(--space-6) var(--space-6);
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--color-linen) 30%, #fff);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 767.98px) {
+  .contact-page-intro .page-header--surface {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+.contact-page .page-title {
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: var(--space-3);
+  color: var(--color-bark);
+}
+
+.contact-page-lead {
+  color: var(--color-slate);
+  line-height: 1.7;
+  max-width: 44rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-4) !important;
+}
+
+.contact-pricing-note {
+  margin-top: 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-slate);
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  border-left: 3px solid var(--color-gold);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.contact-pricing-note strong {
+  font-weight: 600;
+  color: var(--color-bark);
+}
+
+/* Break out of Bootstrap container so form can use ≥65% of viewport (centered) */
+.contact-page-form-section {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--space-4);
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .contact-page-form-section {
+    padding-inline: var(--space-5);
+  }
+}
+
+.contact-page-form-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* At least 65% of viewport width on tablets and up; full width on small phones */
+@media (min-width: 768px) {
+  .contact-page-form-inner {
+    width: 65vw;
+    min-width: 65vw;
+    max-width: 65vw;
+  }
+}
+
+.contact-form-card {
+  position: relative;
+  border-radius: var(--radius-xl) !important;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent) !important;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.05);
+  background: #fff !important;
+}
+
+.contact-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold),
+    color-mix(in srgb, var(--color-sage) 60%, var(--color-gold))
+  );
+  pointer-events: none;
+}
+
+.contact-form-card:hover {
+  transform: none !important;
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.08) !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact-form-card {
+    transition: box-shadow var(--transition-slow);
+  }
+}
+
+.contact-form-card .card-body {
+  padding: var(--space-7) var(--space-6);
+}
+
+@media (max-width: 767.98px) {
+  .contact-form-card .card-body {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+.contact-form .form-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-bark);
+  margin-bottom: var(--space-2);
+}
+
+.contact-form-card .form-control {
+  min-height: 54px;
+  padding: var(--space-3) var(--space-4);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--color-charcoal);
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 30%, transparent);
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.contact-form-card .form-control::placeholder {
+  color: color-mix(in srgb, var(--color-slate) 50%, transparent);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact-form-card .form-control {
+    transition:
+      border-color var(--transition-base),
+      box-shadow var(--transition-base);
+  }
+}
+
+.contact-form-card .form-control:hover {
+  border-color: color-mix(in srgb, var(--color-gold) 50%, transparent);
+}
+
+.contact-form-card .form-control:focus {
+  background: #fff;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-gold) 20%, transparent);
+}
+
+.contact-form-card textarea.form-control {
+  min-height: 180px;
+  padding-top: var(--space-3);
+  resize: vertical;
+}
+
+.contact-form-card .btn[type='submit'] {
+  min-width: 200px;
+  min-height: 54px;
+  margin-top: var(--space-3);
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: var(--radius-full);
+}
+
+.contact-alert {
+  border-radius: var(--radius-md);
+  border: none;
+  padding: var(--space-4) var(--space-4);
+  margin-bottom: var(--space-5);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.contact-alert.alert-success {
+  background: color-mix(in srgb, var(--color-forest) 8%, #fff);
+  color: var(--color-forest);
+  border-left: 4px solid var(--color-forest);
+}
+
+.contact-alert.alert-danger {
+  background: color-mix(in srgb, #c45c5c 8%, #fff);
+  color: #5c2a2a;
+  border-left: 4px solid color-mix(in srgb, #c45c5c 75%, transparent);
+}

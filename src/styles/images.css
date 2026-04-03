@@ -1,0 +1,211 @@
+/* ================================================================
+   IMAGE UTILITIES — reusable patterns for Unsplash photography
+   ================================================================ */
+
+/* ── Full-width section background image with overlay ──────────── */
+.section-bg-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-bg-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.88),
+    rgba(255, 255, 255, 0.95)
+  );
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.section-bg-image > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ── Rounded showcase image with shadow + hover lift ───────────── */
+.img-showcase {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .img-showcase {
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .img-showcase:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+
+/* ── Image with accent border ──────────────────────────────────── */
+.img-accent-border {
+  border: 3px solid var(--color-forest);
+  border-radius: var(--radius-lg);
+  padding: var(--space-1);
+}
+
+
+/* ── 2-column image grid ───────────────────────────────────────── */
+.img-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+@media (max-width: 575.98px) {
+  .img-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ── 3-column image grid ───────────────────────────────────────── */
+.img-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 767.98px) {
+  .img-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .img-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ── Side-by-side text + image layout ──────────────────────────── */
+.content-with-image {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.content-with-image .content-side {
+  flex: 1;
+  min-width: 0;
+}
+
+.content-with-image .image-side {
+  flex: 1;
+  max-width: 50%;
+  min-width: 0;
+}
+
+.content-with-image .image-side img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  .content-with-image {
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .content-with-image .image-side {
+    max-width: 100%;
+  }
+}
+
+.content-with-image.reversed {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 767.98px) {
+  .content-with-image.reversed {
+    flex-direction: column;
+  }
+}
+
+
+/* ── Floating inline image ─────────────────────────────────────── */
+.img-float-right {
+  float: right;
+  margin: 0 0 var(--space-3) var(--space-5);
+  max-width: 220px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 575.98px) {
+  .img-float-right {
+    float: none;
+    max-width: 100%;
+    margin: 0 0 var(--space-3) 0;
+  }
+}
+
+
+/* ── Hero image wrapper with bottom gradient fade ──────────────── */
+.hero-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  max-height: 420px;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, var(--color-cream), transparent);
+  pointer-events: none;
+}
+
+
+/* ── Compact hero wrapper (for secondary pages) ────────────────── */
+.hero-image-wrapper--compact {
+  max-height: 280px;
+}
+
+
+/* ── Step card images (uniform height within stepper/cards) ─────── */
+.step-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: block;
+}
+
+
+/* ── Image caption ─────────────────────────────────────────────── */
+.img-caption {
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  text-align: center;
+  margin-top: var(--space-2);
+  font-style: italic;
+}

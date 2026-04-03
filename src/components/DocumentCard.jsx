@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 
 function DocumentCard({ title, description, fileName }) {
   return (
-    <Card className="h-100">
+    <Card className="h-100 document-card">
       <Card.Body className="d-flex flex-column">
         <Card.Title>{title}</Card.Title>
         <Card.Text className="text-muted">{description}</Card.Text>

@@ -1,0 +1,482 @@
+/* ================================================================
+   BOOTSTRAP OVERRIDES — loaded after bootstrap.min.css
+   ================================================================ */
+
+/* ── Body ──────────────────────────────────────────────────────── */
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+
+/* ================================================================
+   BUTTONS — Primary / Outline / Gold / CTA
+   ================================================================ */
+.btn {
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: var(--space-3) 28px;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+  .btn:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--color-forest);
+  --bs-btn-border-color: var(--color-forest);
+  --bs-btn-hover-bg: var(--color-moss);
+  --bs-btn-hover-border-color: var(--color-moss);
+  --bs-btn-active-bg: var(--color-moss);
+  --bs-btn-active-border-color: var(--color-moss);
+  background-color: var(--color-forest);
+  border-color: var(--color-forest);
+  min-height: 44px;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-moss);
+  border-color: var(--color-moss);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--color-forest);
+  --bs-btn-border-color: var(--color-forest);
+  --bs-btn-hover-bg: var(--color-forest);
+  --bs-btn-hover-border-color: var(--color-forest);
+  --bs-btn-active-bg: var(--color-forest);
+  --bs-btn-active-border-color: var(--color-forest);
+  color: var(--color-forest);
+  border-color: var(--color-forest);
+  border-width: 1.5px;
+  min-height: 44px;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: color-mix(in srgb, var(--color-forest) 8%, transparent);
+  border-color: var(--color-forest);
+  color: var(--color-forest);
+}
+
+.btn-gold {
+  --bs-btn-bg: var(--color-gold);
+  --bs-btn-border-color: var(--color-gold);
+  --bs-btn-color: var(--color-bark);
+  --bs-btn-hover-bg: var(--color-amber);
+  --bs-btn-hover-border-color: var(--color-amber);
+  --bs-btn-hover-color: var(--color-bark);
+  --bs-btn-active-bg: var(--color-amber);
+  --bs-btn-active-border-color: var(--color-amber);
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-bark);
+  font-weight: 600;
+  min-height: 44px;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-amber);
+  border-color: var(--color-amber);
+  color: var(--color-bark);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-light-cta {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: rgba(255, 255, 255, 0.6);
+  --bs-btn-hover-bg: rgba(255, 255, 255, 0.12);
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  border-width: 1.5px;
+}
+
+@media (max-width: 575.98px) {
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ================================================================
+   CARDS
+   ================================================================ */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition:
+      box-shadow var(--transition-base),
+      transform var(--transition-base);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+}
+
+.pricing-highlight {
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-top: 4px solid var(--color-gold) !important;
+  box-shadow: var(--shadow-lg);
+  background: #fff !important;
+}
+
+
+/* ================================================================
+   ACCORDION — clean panels, clear hierarchy, smooth chevron
+   ================================================================ */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.accordion-item {
+  margin-bottom: 0 !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-item {
+    transition:
+      box-shadow var(--transition-base),
+      border-color var(--transition-base);
+  }
+}
+
+.accordion-item:has(.accordion-button:not(.collapsed)) {
+  border-color: color-mix(in srgb, var(--color-forest) 28%, rgba(0, 0, 0, 0.06)) !important;
+  box-shadow: var(--shadow-md);
+}
+
+.accordion-button {
+  position: relative;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: var(--color-charcoal);
+  padding: var(--space-4) var(--space-5);
+  padding-right: calc(var(--space-5) + var(--space-4));
+  background-color: #fff;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--color-charcoal);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-linen) 55%, #fff) 0%,
+    color-mix(in srgb, var(--color-cream) 40%, #fff) 100%
+  );
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: var(--space-3);
+  bottom: var(--space-3);
+  width: 3px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: linear-gradient(180deg, var(--color-forest), var(--color-moss));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-button::after {
+    transition: transform var(--transition-base);
+  }
+}
+
+/* Forest chevron (Bootstrap default is black SVG) */
+.accordion-button::after {
+  position: absolute;
+  right: var(--space-4);
+  top: 50%;
+  margin-top: -0.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-size: 1.125rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232d5f2d'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  opacity: 0.85;
+}
+
+.accordion-button:not(.collapsed)::after {
+  opacity: 1;
+}
+
+.accordion-button:hover {
+  background-color: color-mix(in srgb, var(--color-linen) 35%, #fff);
+}
+
+.accordion-button:not(.collapsed):hover {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-linen) 65%, #fff) 0%,
+    color-mix(in srgb, var(--color-cream) 50%, #fff) 100%
+  );
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.accordion-body {
+  padding: 0 var(--space-5) var(--space-5);
+  padding-top: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fafaf8;
+  color: var(--color-slate);
+  font-size: var(--text-small);
+  line-height: 1.65;
+}
+
+.accordion-body > p:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-body p + p {
+  margin-top: var(--space-3);
+}
+
+.accordion-body ul,
+.accordion-body ol {
+  margin-bottom: var(--space-3);
+  padding-left: var(--space-4);
+}
+
+.accordion-body li + li {
+  margin-top: var(--space-2);
+}
+
+.accordion-body strong {
+  color: var(--color-charcoal);
+  font-weight: 600;
+}
+
+
+/* ================================================================
+   ALERTS
+   ================================================================ */
+.alert-warning {
+  --bs-alert-bg: color-mix(in srgb, var(--color-gold) 10%, #fff);
+  --bs-alert-border-color: color-mix(in srgb, var(--color-gold) 35%, transparent);
+  color: var(--color-charcoal);
+  border-radius: var(--radius-md);
+}
+
+
+/* ================================================================
+   FORMS
+   ================================================================ */
+.form-control,
+.form-select {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: var(--space-3);
+  font-size: var(--text-body);
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .form-control,
+  .form-select {
+    transition:
+      border-color var(--transition-fast),
+      box-shadow var(--transition-fast);
+  }
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-forest);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-forest) 20%, transparent);
+}
+
+
+/* ================================================================
+   NAVBAR
+   ================================================================ */
+.navbar.bg-dark {
+  background: var(--color-bark) !important;
+}
+
+.site-navbar {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-navbar {
+    transition:
+      box-shadow var(--transition-base),
+      background-color var(--transition-base),
+      border-color var(--transition-base);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-navbar {
+    transition: none;
+  }
+}
+
+.site-navbar--scrolled {
+  box-shadow: var(--shadow-lg);
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+@supports (backdrop-filter: blur(12px)) {
+  .site-navbar--scrolled {
+    background: rgba(62, 39, 35, 0.92) !important;
+    backdrop-filter: saturate(150%) blur(12px);
+  }
+}
+
+.site-navbar__logo-icon {
+  display: block;
+}
+
+.site-nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-weight: 500;
+  font-size: var(--text-small);
+  letter-spacing: 0.01em;
+  padding-bottom: var(--space-1) !important;
+  margin-bottom: 2px;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.site-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  border-radius: var(--radius-full);
+  background: var(--color-gold);
+  transform: translateX(-50%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-nav-link {
+    transition: color var(--transition-fast);
+  }
+  .site-nav-link::after {
+    transition: width var(--transition-base);
+  }
+}
+
+.site-nav-link:hover {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.site-nav-link:hover::after {
+  width: var(--space-4);
+}
+
+.site-nav-link--active {
+  color: var(--color-gold) !important;
+}
+
+.site-nav-link--active::after {
+  width: 100%;
+  background: var(--color-gold);
+}
+
+.site-navbar .btn-gold {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-small);
+  min-height: 36px;
+}
+
+@media (max-width: 991.98px) {
+  .site-navbar .navbar-nav .nav-link {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-nav-link::after {
+    display: none;
+  }
+
+  .site-navbar .btn-gold {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+    font-size: var(--text-body);
+  }
+}
+
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.site-footer {
+  background: var(--color-bark);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.site-footer .footer-link {
+  text-decoration: none !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-footer .footer-link {
+    transition: color var(--transition-fast);
+  }
+}
+
+.site-footer .footer-link:hover {
+  color: var(--color-gold) !important;
+  text-decoration: none !important;
+}
+
+.site-footer .footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}

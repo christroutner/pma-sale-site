@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Alert, Button, Card, Col, Form, Row, Spinner } from 'react-bootstrap'
+import { Alert, Button, Card, Col, Container, Form, Row, Spinner } from 'react-bootstrap'
 
 const initialState = {
   name: '',
@@ -80,35 +80,39 @@ function ContactPage() {
   }
 
   return (
-    <>
-      <section className="section-space">
-        <h1 className="page-title">Contact TheLocalTrade.app</h1>
-        <p className="lead mb-2">
-          Tell us about your community and we will help you launch a private
-          member trading platform.
-        </p>
-        <p className="mb-0">
-          Pricing: <strong>$500 setup</strong>, <strong>$50/month hosting</strong>, and{' '}
-          <strong>$50/hour customization or maintenance</strong>.
-        </p>
-      </section>
+    <article className="contact-page my-5 py-3">
+      <Container>
+        <section className="section-space contact-page-intro mb-5">
+          <header className="page-header page-header--surface text-center">
+            <h1 className="page-title h1">Contact TheLocalTrade.app</h1>
+            <p className="lead mb-4 contact-page-lead">
+              Tell us about your community and we will help you launch a private
+              member trading platform.
+            </p>
+            <div className="contact-pricing-note mb-0 text-start">
+              Pricing: <strong>$500 setup</strong>, <strong>$50/month hosting</strong>, and{' '}
+              <strong>$50/hour customization or maintenance</strong>.
+            </div>
+          </header>
+        </section>
 
-      <section className="section-space">
-        <Row>
-          <Col lg={8}>
-            <Card>
+        <section className="section-space contact-page-form-section" aria-label="Contact form">
+          <div className="contact-page-form-inner">
+            <Card className="contact-form-card">
               <Card.Body>
                 {status === 'success' && (
-                  <Alert variant="success">
+                  <Alert variant="success" className="contact-alert">
                     Thanks. Your inquiry was sent successfully.
                   </Alert>
                 )}
                 {status === 'error' && (
-                  <Alert variant="danger">{errorMessage}</Alert>
+                  <Alert variant="danger" className="contact-alert">
+                    {errorMessage}
+                  </Alert>
                 )}
 
-                <Form onSubmit={handleSubmit} noValidate>
-                  <Row className="g-3">
+                <Form className="contact-form" onSubmit={handleSubmit} noValidate>
+                  <Row className="g-4">
                     <Col md={6}>
                       <Form.Group controlId="contact-name">
                         <Form.Label>Name</Form.Label>
@@ -118,6 +122,7 @@ function ContactPage() {
                           value={formData.name}
                           onChange={handleChange}
                           required
+                          autoComplete="name"
                         />
                       </Form.Group>
                     </Col>
@@ -130,6 +135,7 @@ function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           required
+                          autoComplete="email"
                         />
                       </Form.Group>
                     </Col>
@@ -142,6 +148,7 @@ function ContactPage() {
                           value={formData.organization}
                           onChange={handleChange}
                           required
+                          autoComplete="organization"
                         />
                       </Form.Group>
                     </Col>
@@ -158,7 +165,7 @@ function ContactPage() {
                         />
                       </Form.Group>
                     </Col>
-                    <Col xs={12} className="d-none">
+                    <Col xs={12} className="d-none" aria-hidden="true">
                       <Form.Group controlId="contact-website">
                         <Form.Label>Website</Form.Label>
                         <Form.Control
@@ -167,13 +174,18 @@ function ContactPage() {
                           value={formData.website}
                           onChange={handleChange}
                           autoComplete="off"
+                          tabIndex={-1}
                         />
                       </Form.Group>
                     </Col>
-                    <Col xs={12}>
-                      <Button type="submit" disabled={status === 'submitting'}>
+                    <Col xs={12} className="text-center mt-5">
+                      <Button
+                        type="submit"
+                        className="btn-gold"
+                        disabled={status === 'submitting'}
+                      >
                         {status === 'submitting' && (
-                          <Spinner size="sm" className="me-2" />
+                          <Spinner size="sm" className="me-2" aria-hidden="true" />
                         )}
                         Send Inquiry
                       </Button>
@@ -182,10 +194,10 @@ function ContactPage() {
                 </Form>
               </Card.Body>
             </Card>
-          </Col>
-        </Row>
-      </section>
-    </>
+          </div>
+        </section>
+      </Container>
+    </article>
   )
 }
 
