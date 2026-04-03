@@ -1,0 +1,321 @@
+/* ================================================================
+   HOME SECTION HEADINGS
+   ================================================================ */
+.home-section-heading {
+  font-family: var(--font-display);
+  position: relative;
+  padding-bottom: var(--space-1);
+  color: var(--color-bark);
+}
+
+.home-section-heading::after {
+  content: '';
+  display: block;
+  width: var(--space-7);
+  height: 2px;
+  margin-top: var(--space-3);
+  background: var(--color-gold);
+  opacity: 0.8;
+}
+
+.text-center.home-section-heading::after,
+.text-center .home-section-heading::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ================================================================
+   SECTION BORDERS / UTILITIES
+   ================================================================ */
+.border-sage {
+  border-color: color-mix(in srgb, var(--color-sage) 30%, transparent) !important;
+}
+
+.border-luxury {
+  border: 1px solid color-mix(in srgb, var(--color-gold) 30%, transparent) !important;
+}
+
+.luxury-card {
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.05);
+  border-color: color-mix(in srgb, var(--color-gold) 40%, transparent);
+}
+
+
+/* ================================================================
+   FINAL CTA (full-bleed)
+   ================================================================ */
+.final-cta-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+  background: radial-gradient(circle at top, var(--color-forest) 0%, var(--color-bark) 100%);
+  color: var(--color-cream);
+  border-top: 1px solid color-mix(in srgb, var(--color-gold) 30%, transparent);
+}
+
+.final-cta-section .hero-title,
+.final-cta-section h2 {
+  color: var(--color-cream);
+}
+
+.final-cta-section .lead {
+  color: color-mix(in srgb, var(--color-cream) 80%, transparent);
+  max-width: 54ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.15rem;
+}
+
+
+/* ================================================================
+   DEMO IFRAME
+   ================================================================ */
+.demo-iframe-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08), 0 0 0 1px color-mix(in srgb, var(--color-gold) 20%, transparent);
+  aspect-ratio: 16 / 10;
+  max-height: 640px;
+  background: #fff;
+  margin-top: var(--space-5);
+}
+
+.demo-iframe-wrap iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 575.98px) {
+  .demo-iframe-wrap iframe {
+    min-height: 240px;
+  }
+}
+
+
+/* ================================================================
+   SOCIAL PROOF
+   ================================================================ */
+.social-quote {
+  background: color-mix(in srgb, var(--color-linen) 50%, #fff);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+}
+
+.social-quote:hover {
+  transform: none;
+}
+
+.social-quote .blockquote {
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  position: relative;
+  text-align: center;
+}
+
+.social-quote .blockquote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--color-bark);
+  position: relative;
+  z-index: 1;
+}
+
+.social-quote .blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  line-height: 1;
+  font-family: var(--font-display);
+  color: color-mix(in srgb, var(--color-gold) 15%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stat-pill {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--color-bark);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+
+/* ================================================================
+   FAQ PREVIEW
+   ================================================================ */
+.faq-preview-link {
+  color: var(--color-forest);
+  text-decoration: none !important;
+  font-weight: 600;
+  border-bottom: 2px solid color-mix(in srgb, var(--color-gold) 50%, transparent);
+  font-size: 1.1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .faq-preview-link {
+    transition:
+      color var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+}
+
+.faq-preview-link:hover {
+  color: var(--color-moss);
+  border-bottom-color: var(--color-moss);
+  text-decoration: none !important;
+}
+
+/* ================================================================
+   PRICING
+   ================================================================ */
+.pricing-lux-card {
+  background: radial-gradient(circle at top left, var(--color-forest) 0%, var(--color-bark) 100%);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 30%, transparent);
+  border-radius: var(--radius-xl);
+  color: var(--color-cream);
+  padding: var(--space-5) var(--space-4);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-lux-card .pricing-display {
+  font-size: 3rem;
+  color: var(--color-gold);
+  margin-bottom: var(--space-2);
+}
+
+.pricing-lux-card .card-title {
+  color: var(--color-cream);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.pricing-lux-card .card-text {
+  color: color-mix(in srgb, var(--color-cream) 80%, transparent);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ================================================================
+   TIMELINE (How It Works)
+   ================================================================ */
+.luxury-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  margin-top: var(--space-6);
+}
+
+.timeline-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.timeline-step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-image-wrap {
+  flex: 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  position: relative;
+}
+
+.timeline-image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+  pointer-events: none;
+}
+
+.timeline-image-wrap img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.timeline-content {
+  flex: 1;
+  padding: var(--space-4);
+}
+
+.timeline-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: color-mix(in srgb, var(--color-gold) 30%, transparent);
+  line-height: 1;
+  margin-bottom: var(--space-3);
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--color-bark);
+  margin-bottom: var(--space-3);
+}
+
+.timeline-text {
+  font-size: 1.1rem;
+  color: var(--color-slate);
+  line-height: 1.7;
+}
+
+@media (max-width: 767.98px) {
+  .timeline-step, .timeline-step:nth-child(even) {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  .timeline-content {
+    padding: 0;
+  }
+}

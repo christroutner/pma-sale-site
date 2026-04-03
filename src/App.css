@@ -1,30 +1,232 @@
+/* ================================================================
+   APP SHELL & LAYOUT
+   ================================================================ */
 .app-shell {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: clip;
 }
 
 .app-main {
   flex: 1;
 }
 
-.section-space {
-  margin-bottom: 3rem;
-}
 
-.pricing-highlight {
-  border: 2px solid #0d6efd;
+/* ================================================================
+   SECTION SPACING
+   ================================================================ */
+.section-space {
+  margin-bottom: var(--space-6);
 }
 
 .page-title {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-3);
 }
 
 .muted-note {
-  font-size: 0.95rem;
-  color: #6c757d;
+  font-size: var(--text-small);
+  color: var(--color-slate);
+  line-height: 1.6;
 }
 
 .download-link {
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+
+/* ================================================================
+   HOMEPAGE SECTIONS
+   ================================================================ */
+.home-section {
+  margin-bottom: var(--space-9);
+  scroll-margin-top: var(--space-8);
+}
+
+.home-section:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ── Hero pattern background ───────────────────────────────────── */
+.hero-pattern {
+  position: relative;
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 85% 15%, color-mix(in srgb, var(--color-sage) 16%, transparent) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 10% 85%, color-mix(in srgb, var(--color-forest) 6%, transparent) 0%, transparent 45%);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+/* ── Surface panel (How-It-Works, Pricing) ─────────────────────── */
+.home-section--surface {
+  background: color-mix(in srgb, var(--color-linen) 50%, #fff);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-5);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 767.98px) {
+  .home-section--surface {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+
+/* ── Problem transition callout ────────────────────────────────── */
+.problem-transition {
+  color: var(--color-forest);
+}
+
+
+/* ================================================================
+   DEMO BROWSER MOCKUP
+   ================================================================ */
+.demo-browser-frame {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .demo-browser-frame {
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+  .demo-browser-frame:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+}
+
+.demo-browser-chrome {
+  background: linear-gradient(180deg, #4a3f3c 0%, var(--color-bark) 100%);
+  color: rgba(255, 255, 255, 0.8);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-caption);
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  letter-spacing: 0.02em;
+}
+
+.demo-browser-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.demo-browser-dots span {
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: var(--radius-full);
+}
+
+.demo-browser-dots span:nth-child(1) { background: #e57373; }
+.demo-browser-dots span:nth-child(2) { background: #ffb74d; }
+.demo-browser-dots span:nth-child(3) { background: #81c784; }
+
+.demo-placeholder {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  text-align: center;
+  background: color-mix(in srgb, var(--color-linen) 40%, #fff);
+}
+
+@media (max-width: 575.98px) {
+  .demo-placeholder {
+    min-height: 160px;
+    padding: var(--space-4);
+  }
+}
+
+
+/* ================================================================
+   STEPPER (How It Works)
+   ================================================================ */
+.stepper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .stepper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.stepper-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 0 var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .stepper-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: calc(50% + 28px);
+    right: calc(-50% + 28px);
+    height: 2px;
+    background: color-mix(in srgb, var(--color-sage) 40%, transparent);
+    z-index: 0;
+  }
+}
+
+.stepper-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-forest);
+  color: #fff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ================================================================
+   PRODUCT HERO
+   ================================================================ */
+.product-hero {
+  padding: var(--space-5) 0 var(--space-3);
+}
+
+.product-hero .hero-title {
+  font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+}
+
+
+/* ================================================================
+   LOADING FALLBACK
+   ================================================================ */
+.app-loading-fallback {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-slate);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  letter-spacing: 0.04em;
 }

@@ -2,7 +2,7 @@ import Alert from 'react-bootstrap/Alert'
 
 function LegalDisclaimer({ compact = false }) {
   return (
-    <Alert variant="warning">
+    <Alert variant="warning" className="legal-disclaimer-alert">
       <strong>Legal Disclaimer:</strong>{' '}
       {compact
         ? 'Educational content only. This is not legal advice.'

@@ -1,0 +1,29 @@
+/* ================================================================
+   Scroll-triggered section reveals (home & compositor-safe motion)
+   — opacity + translate3d only; IntersectionObserver in JS
+   ================================================================ */
+:root {
+  --sr-duration: 1.4s;
+  --sr-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 1.25rem, 0);
+  transition:
+    opacity var(--sr-duration) var(--sr-ease) var(--sr-delay, 0ms),
+    transform var(--sr-duration) var(--sr-ease) var(--sr-delay, 0ms);
+}
+
+.scroll-reveal.scroll-reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
